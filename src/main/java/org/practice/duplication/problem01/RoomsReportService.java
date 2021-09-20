@@ -1,8 +1,8 @@
-package org.practice.refactor.duplication;
+package org.practice.duplication.problem01;
 
-import org.practice.refactor.duplication.data.BudgetDataService;
-import org.practice.refactor.duplication.data.LastSubmittedDataService;
-import org.practice.refactor.duplication.data.RoomsDataService;
+import org.practice.duplication.problem01.data.BudgetDataService;
+import org.practice.duplication.problem01.data.RoomsDataService;
+import org.practice.duplication.problem01.data.LastSubmittedDataService;
 
 import java.util.List;
 

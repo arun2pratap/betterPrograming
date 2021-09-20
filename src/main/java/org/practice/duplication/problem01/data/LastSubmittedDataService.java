@@ -1,19 +1,20 @@
-package org.practice.refactor.duplication.data;
+package org.practice.duplication.problem01.data;
 
 import java.util.Collections;
 import java.util.List;
 
-public class BudgetDataService {
+public class LastSubmittedDataService {
+
 
     public boolean isDataChange() {
         return false;
     }
 
-    public List<Integer> getBudgetDataFull() {
+    public List<Integer> getLastSubmittedDataFull() {
         return Collections.emptyList();
     }
 
-    public List<Integer> getBudgetDataDifferntial() {
+    public List<Integer> getLastSubmittedDifferntial() {
         return Collections.emptyList();
     }
 }

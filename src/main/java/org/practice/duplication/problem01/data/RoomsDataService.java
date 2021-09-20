@@ -1,4 +1,4 @@
-package org.practice.refactor.duplication.data;
+package org.practice.duplication.problem01.data;
 
 import java.util.Collections;
 import java.util.List;
