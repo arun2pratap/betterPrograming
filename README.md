@@ -1,3 +1,7 @@
-Practice problem.
+##Practice problem.
 
-1. 
+#### Practice Problem
+- Remove duplication/refactor RoomsReportService
+ ```
+  org.practice.duplication.problem01.RoomsReportService 
+```
