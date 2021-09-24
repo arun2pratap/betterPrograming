@@ -6,7 +6,7 @@ import java.util.List;
 public class LastSubmittedDataService {
 
 
-    public boolean isDataChange() {
+    public boolean isFirstDataPull() {
         return false;
     }
 

@@ -31,15 +31,17 @@ class RoomsReportServiceTest {
 
     @Test
     void getActiveRoomsDataFull() {
-        when(roomsDataService.isDataChange()).thenReturn(false);
+        when(roomsDataService.isFirstDataPull()).thenReturn(true);
         when(roomsDataService.getRoomsDataFull()).thenReturn(List.of(3,4));
         assertEquals("Add header: Add PropertyName: Data:[3, 4]: Total rows-2: Add Footer", roomsReportService.getActiveRoomsData());
     }
 
     @Test
     void getActiveRoomsDataDifferential() {
-        when(roomsDataService.isDataChange()).thenReturn(true);
+        when(roomsDataService.isFirstDataPull()).thenReturn(false);
         when(roomsDataService.getRoomsDataDifferntial()).thenReturn(List.of(4));
         assertEquals("Add header: Add PropertyName: Data:[4]: Total rows-1: Add Footer", roomsReportService.getActiveRoomsData());
     }
+
+    // TODO: test for budget and lastSubmitted getData
 }

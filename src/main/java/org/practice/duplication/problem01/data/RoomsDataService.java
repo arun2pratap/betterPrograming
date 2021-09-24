@@ -9,7 +9,7 @@ public class RoomsDataService {
         return List.of(0);
     }
 
-    public boolean isDataChange() {
+    public boolean isFirstDataPull() {
         return false;
     }
 

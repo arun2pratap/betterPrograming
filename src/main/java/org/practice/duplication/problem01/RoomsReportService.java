@@ -22,7 +22,7 @@ public class RoomsReportService {
         List<Integer> roomsData;
         result.append("Add header");
         result.append(": Add PropertyName");
-        if (!roomsDataService.isDataChange()) {
+        if (roomsDataService.isFirstDataPull()) {
             roomsData = roomsDataService.getRoomsDataFull();
         } else {
             roomsData = roomsDataService.getRoomsDataDifferntial();
@@ -38,7 +38,7 @@ public class RoomsReportService {
         List<Integer> roomsData;
         result.append("Add header");
         result.append(": Add PropertyName");
-        if (!budgetDataService.isDataChange()) {
+        if (budgetDataService.isFirstDataPull()) {
             roomsData = budgetDataService.getBudgetDataFull();
         } else {
             roomsData = budgetDataService.getBudgetDataDifferntial();
@@ -54,7 +54,7 @@ public class RoomsReportService {
         List<Integer> roomsData;
         result.append("Add header");
         result.append(": Add PropertyName");
-        if (!lastSubmittedDataService.isDataChange()) {
+        if (lastSubmittedDataService.isFirstDataPull()) {
             roomsData = lastSubmittedDataService.getLastSubmittedDataFull();
         } else {
             roomsData = lastSubmittedDataService.getLastSubmittedDifferntial();

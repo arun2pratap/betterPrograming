@@ -5,7 +5,7 @@ import java.util.List;
 
 public class BudgetDataService {
 
-    public boolean isDataChange() {
+    public boolean isFirstDataPull() {
         return false;
     }
 
