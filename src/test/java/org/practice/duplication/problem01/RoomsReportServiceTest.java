@@ -12,7 +12,7 @@ import org.practice.duplication.problem01.data.RoomsDataService;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 class RoomsReportServiceTest {
     @Mock
@@ -34,6 +34,7 @@ class RoomsReportServiceTest {
         when(roomsDataService.isFirstDataPull()).thenReturn(true);
         when(roomsDataService.getRoomsDataFull()).thenReturn(List.of(3,4));
         assertEquals("Add header: Add PropertyName: Data:[3, 4]: Total rows-2: Add Footer", roomsReportService.getActiveRoomsData());
+        verify(roomsDataService,never()).getRoomsDataDifferntial();
     }
 
     @Test
@@ -41,6 +42,7 @@ class RoomsReportServiceTest {
         when(roomsDataService.isFirstDataPull()).thenReturn(false);
         when(roomsDataService.getRoomsDataDifferntial()).thenReturn(List.of(4));
         assertEquals("Add header: Add PropertyName: Data:[4]: Total rows-1: Add Footer", roomsReportService.getActiveRoomsData());
+        verify(roomsDataService,never()).getRoomsDataFull();
     }
 
     // TODO: test for budget and lastSubmitted getData
